@@ -60,7 +60,7 @@ func (r *mutationResolver) StartGame(ctx context.Context) (bool, error) {
 		gamePlayer = append(gamePlayer, models.Player{Id: p.Name, Name: p.Name})
 	}
 
-	state := game.Initialize(gamePlayer, 90)
+	state := game.Initialize(gamePlayer, 80)
 	room.GameState = &state
 	send(room)
 	return true, nil
